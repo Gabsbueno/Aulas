@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Salario {
+
+    public static void main(String[] args) {
+        Scanner leia = new Scanner(System.in);
+
+        System.out.print("Digite o salário: ");
+        double lersal = leia.nextDouble();
+        double resultado = salario(lersal);
+
+        System.out.printf("%.2f", resultado);
+
+        leia.close();
+
+    }
+
+    public static double salario(double sal) {
+        double newsal;
+
+        if (sal >= 1200) {
+            newsal = sal + (sal * 0.15);
+        } else {
+            newsal = sal + (sal * 0.075);
+        }
+        return newsal;
+    }
+}
