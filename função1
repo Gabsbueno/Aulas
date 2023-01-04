@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class funcao1 {
+  // declara função ehpar
+  public static boolean ehpar(int n) {
+    return (n % 2 == 0);
+  }
+
+  public static void main(String[] args) {
+    Scanner leitor = new Scanner(System.in);
+    System.out.print("Número: ");
+    int num = leitor.nextInt();
+    boolean par = ehpar(num);
+    if (par == true) {
+      System.out.printf("O número %d é par!\n", num);
+    }
+    else {
+      System.out.printf("O número %d é ímpar!\n", num);
+    }
+  }
+}
